@@ -11,6 +11,11 @@ const upload = multer({ dest: "uploads/" });
 app.use(cors());
 
 // Default Route
+app.get("/",  (_,res)=>{
+  res.send(`<h1>Hell0 Server</h1>`)
+  
+})
+
 
 app.post("/rm-bg", upload.single("image"), async (req, res) => {
   try {
